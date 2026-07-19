@@ -55,7 +55,7 @@ footer {
 /* Home */
 .home_page_layout{
     display: grid;
-    grid-template-columns: 1fr 280px;
+    grid-template-columns: 5fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 30px;
 }
@@ -65,7 +65,7 @@ footer {
     border: 15px solid rgb(47, 74, 155);
     border-radius: 35px;
     margin-top: 20px;
-    min-height: 300px;
+    padding-bottom: 20px;
     top: 20px;
     right: 20px;
     overflow: hidden;
