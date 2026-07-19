@@ -1,7 +1,12 @@
 /*Global*/
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 .navigation_bar {
@@ -84,7 +89,7 @@ footer {
 }
 
 /* Mobile */
-@media (max_width: 750px) {
+@media (max-width: 750px) {
     .home_page_layout {
         grid-template-columns: 1fr;
     }
