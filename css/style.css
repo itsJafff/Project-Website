@@ -1,3 +1,10 @@
+:root {
+    --main-color: rgb(47, 74, 155);
+    --hover-color: rgb(56, 87, 182);
+    --active-color: rgb(42, 66, 137);
+    --shadow-color: rgb(44, 66, 125);
+}
+
 /*Global*/
 * {
     box-sizing: border-box;
@@ -10,7 +17,7 @@ body {
 }
 
 .navigation_bar {
-    background-color: rgb(47, 74, 155);
+    background-color: var(--main-color);
     color: white;
     table-layout: fixed;
 
@@ -20,15 +27,32 @@ body {
 
 .navigation_bar th {
     padding: 0px 0px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
 }
 
-.navigation_bar th:hover {
-    background-color: rgb(56, 87, 182);
-    border-radius: 10px;
+.navigation_bar th::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background-color: var(--hover-color);
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 0;
+}
+
+.navigation_bar th:hover::before {
+    transform: translateX(0);
+}
+
+.navigation_bar th > * {
+    position: relative;
+    z-index: 1;
 }
 
 .navigation_bar th:active {
-    background-color: rgb(42, 66, 137);
+    background-color: var(--active-color);
     border-radius: 10px;
 }
 
@@ -51,16 +75,48 @@ body {
 
 .project {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 5px solid rgb(47, 74, 155);
-    border-radius: 35px;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+    border: 5px solid var(--main-color);
+    border-radius: 3px;
     aspect-ratio: 1/1;
+    box-shadow: 0px 8px 0px 8px var(--shadow-color);
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.project::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background-color: var(--hover-color);
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.project:hover::before {
+    transform: translateX(0);
+}
+
+.project > * {
+    position: relative;
+    z-index: 0;
+}
+
+.project_image{
+    height: 40%;
+    border-radius: 3px;
 }
 
 footer {
-    background-color: rgb(47, 74, 155);
+    background-color: var(--main-color);
     color: white;
+    margin-top: 50px;
     margin-bottom: 0;
     min-height: 80px;
     padding: 5px 5px;
@@ -69,8 +125,8 @@ footer {
 /* Home */
 .home_page_layout{
     display: grid;
-    grid-template-columns: 1fr 280px;
-    gap: 30px;
+    grid-template-columns: 1fr 30%;
+    gap: 2%;
     margin-bottom: 30px;
     margin: 10px;
 }
@@ -78,18 +134,18 @@ footer {
 .home_projects, .home_learning {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 2%;
 }
 
 .aboutme_box {
     position: sticky;
-    border: 15px solid rgb(47, 74, 155);
-    border-radius: 35px;
+    border: 7px solid var(--main-color);
+    border-radius: 3px;
+    box-shadow: 0px 8px 0px 8px var(--shadow-color);
     margin-top: 20px;
     padding-bottom: 20px;
     top: 20px;
     right: 20px;
-    overflow: hidden;
     max-height: fit-content;
 }
 
@@ -118,5 +174,9 @@ footer {
     .aboutme_box {
         position: static;
         margin: 10px 10px;
+    }
+
+    footer {
+        margin-top: 100px;
     }
 }
