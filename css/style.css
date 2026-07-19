@@ -49,6 +49,15 @@ body {
     height: 100px;
 }
 
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid rgb(47, 74, 155);
+    border-radius: 35px;
+    aspect-ratio: 1/1;
+}
+
 footer {
     background-color: rgb(47, 74, 155);
     color: white;
@@ -63,6 +72,13 @@ footer {
     grid-template-columns: 1fr 280px;
     gap: 30px;
     margin-bottom: 30px;
+    margin: 10px;
+}
+
+.home_projects, .home_learning {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
 }
 
 .aboutme_box {
@@ -74,6 +90,7 @@ footer {
     top: 20px;
     right: 20px;
     overflow: hidden;
+    max-height: fit-content;
 }
 
 .aboutme_box h3{
@@ -94,7 +111,12 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .home_projects, .home_learning {
+        grid-template-columns: 1fr;
+    }
+
     .aboutme_box {
         position: static;
+        margin: 10px 10px;
     }
 }
