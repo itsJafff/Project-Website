@@ -1,0 +1,80 @@
+/*Global*/
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigation_bar {
+    background-color: rgb(47, 74, 155);
+    color: white;
+    table-layout: fixed;
+
+    width: 100%;
+    margin-top: 0;
+}
+
+.navigation_bar th {
+    padding: 0px 0px;
+}
+
+.navigation_bar th:hover {
+    background-color: rgb(56, 87, 182);
+    border-radius: 10px;
+}
+
+.navigation_bar th:active {
+    background-color: rgb(42, 66, 137);
+    border-radius: 10px;
+}
+
+.navigation_bar th a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    min-height: 58px;
+    align-items: center;
+    justify-content: center;
+}
+
+.website_title {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0px;
+    height: 100px;
+}
+
+footer {
+    background-color: rgb(47, 74, 155);
+    color: white;
+    margin-bottom: 0;
+    min-height: 80px;
+    padding: 5px 5px;
+}
+
+/* Home */
+.home_page_layout{
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+
+.aboutme_box {
+    position: sticky;
+    border: 15px solid rgb(47, 74, 155);
+    border-radius: 35px;
+    margin-top: 20px;
+    min-height: 300px;
+    top: 20px;
+    right: 20px;
+    overflow: hidden;
+}
+
+.aboutme_box h3{
+    margin: 20px 5px 10px 5px;
+}
+
+.aboutme_box p {
+    margin: 5px;
+}
