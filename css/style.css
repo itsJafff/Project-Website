@@ -56,8 +56,8 @@ footer {
 .home_page_layout{
     display: grid;
     grid-template-columns: 1fr 280px;
-    grid-template-rows: 1fr 1fr;
     gap: 30px;
+    margin-bottom: 30px;
 }
 
 .aboutme_box {
@@ -87,5 +87,9 @@ footer {
 @media (max_width: 750px) {
     .home_page_layout {
         grid-template-columns: 1fr;
+    }
+
+    .aboutme_box {
+        position: static;
     }
 }
